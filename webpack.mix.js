@@ -18,10 +18,6 @@ mix.js('resources/js/app.js', 'public/js').vue()
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .postCss('resources/css/panel.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ])
     .alias({
         '@': 'resources/js',
     })
