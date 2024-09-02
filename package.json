@@ -26,7 +26,7 @@
         "laravel-mix-workbox": "^0.1.4",
         "lodash": "^4.17.21",
         "mini-css-extract-plugin": "^2.6.0",
-        "node-sass": "^7.0.1",
+        "node-sass": "^9.0.0",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.2",
         "resolve-url-loader": "^5.0.0",
