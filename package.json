@@ -61,7 +61,7 @@
         "jquery.easing": "^1.4.1",
         "js-base64": "^3.7.2",
         "laravel-echo": "^1.11.7",
-        "luxon": "^2.4.0",
+        "luxon": "^2.5.2",
         "pusher-js": "^7.1.0-beta",
         "remixicon": "^2.5.0",
         "tinymce": "^6.3.1",
