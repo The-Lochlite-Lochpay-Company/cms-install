@@ -19,7 +19,7 @@
         "@vue/compiler-sfc": "^3.2.31",
         "@vue/server-renderer": "^3.2.31",
         "autoprefixer": "^10.4.7",
-        "axios": "^0.25",
+        "axios": "^0.28",
         "compass-mixins": "^0.12.11",
         "file-loader": "^6.2.0",
         "laravel-mix": "^6.0.6",
