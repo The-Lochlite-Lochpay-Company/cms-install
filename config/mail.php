@@ -1,5 +1,5 @@
 <?php
-use Lochlite\cms\Lochlitecms;
+
 return [
 
     /*
@@ -42,7 +42,8 @@ return [
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
-         ],
+            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+        ],
 
         'ses' => [
             'transport' => 'ses',
@@ -113,6 +114,5 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-	
-	'verify_peer' => true,
+
 ];

@@ -59,39 +59,7 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-        'ftp' => [
-            'driver' => 'ftp',
-            'host' => env('FTP_HOST'),
-            'username' => env('FTP_USERNAME'),
-            'password' => env('FTP_PASSWORD'),
-            'port' => env('FTP_PORT', 21),
-            'ssl' => env('FTP_SSL', true),
-            'timeout' => env('FTP_TIMEOUT', 100),
-            'passive' => env('FTP_PASSIVE', true),
-            'root' => env('FTP_ROOT'),
-        ],	
-		
-        'sftp' => [
-            'driver' => 'sftp',
-            'host' => env('SFTP_HOST'),
-         
-            // Settings for basic authentication...
-            'username' => env('SFTP_USERNAME'),
-            'password' => env('SFTP_PASSWORD'),
-         
-            // Settings for SSH key based authentication with encryption password...
-            'privateKey' => env('SFTP_PRIVATE_KEY'),
-            'password' => env('SFTP_PASSWORD'),
-         
-            // Optional SFTP Settings...
-            // 'hostFingerprint' => env('SFTP_HOST_FINGERPRINT'),
-            // 'maxTries' => 4,
-            // 'passphrase' => env('SFTP_PASSPHRASE'),
-            // 'port' => env('SFTP_PORT', 22),
-            // 'root' => env('SFTP_ROOT', ''),
-            // 'timeout' => 30,
-            // 'useAgent' => true,
-        ],
+
     ],
 
     /*

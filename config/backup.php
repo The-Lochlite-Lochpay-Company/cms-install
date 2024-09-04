@@ -85,7 +85,7 @@ return [
         ],
 
         /*
-         * The database dump can be compressed to decrease diskspace usage.
+         * The database dump can be compressed to decrease disk space usage.
          *
          * Out of the box Laravel-backup supplies
          * Spatie\DbDumper\Compressors\GzipCompressor::class.
@@ -166,11 +166,11 @@ return [
         'notifiable' => \Spatie\Backup\Notifications\Notifiable::class,
 
         'mail' => [
-            'to' => Config()->get('lochlite.mail.from.address', 'exemple@exemple.com'),
+            'to' => 'your@example.com',
 
             'from' => [
-                'address' => Config()->get('lochlite.mail.from.address', 'exemple@exemple.com'),
-                'name' => Config()->get('lochlite.mail.from.name', 'App Name'),
+                'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+                'name' => env('MAIL_FROM_NAME', 'Example'),
             ],
         ],
 
@@ -191,9 +191,15 @@ return [
         'discord' => [
             'webhook_url' => '',
 
-            'username' => null,
+            /*
+             * If this is an empty string, the name field on the webhook will be used.
+             */
+            'username' => '',
 
-            'avatar_url' => null,
+            /*
+             * If this is an empty string, the avatar on the webhook will be used.
+             */
+            'avatar_url' => '',
         ],
     ],
 

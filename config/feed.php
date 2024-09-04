@@ -11,15 +11,15 @@ return [
              * You can also pass an argument to that method. Note that their key must be the name of the parameter:
              * [App\Model::class, 'getAllFeedItems', 'parameterName' => 'argument']
              */
-            'items' => ['App\Models\Posts','getFeedItems'],
+            'items' => '',
 
             /*
              * The feed will be available on this url.
              */
-            'url' => '/feed',
+            'url' => '',
 
-            'title' => Config()->get('lochlite.app.name', 'App Name'),
-            'description' => 'Our top posts of the week.',
+            'title' => 'My feed',
+            'description' => 'The description of the feed.',
             'language' => 'en-US',
 
             /*
@@ -32,12 +32,12 @@ return [
             /*
              * The format of the feed. Acceptable values are 'rss', 'atom', or 'json'.
              */
-            'format' => 'json',
+            'format' => 'atom',
 
             /*
              * The view that will render the feed.
              */
-            'view' => 'feed::json',
+            'view' => 'feed::atom',
 
             /*
              * The mime type to be used in the <link> tag. Set to an empty string to automatically

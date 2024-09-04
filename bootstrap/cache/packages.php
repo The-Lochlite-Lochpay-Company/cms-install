@@ -39,6 +39,13 @@
       'Agent' => 'Jenssegers\\Agent\\Facades\\Agent',
     ),
   ),
+  'laravel/breeze' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Breeze\\BreezeServiceProvider',
+    ),
+  ),
   'laravel/fortify' => 
   array (
     'providers' => 
@@ -51,6 +58,13 @@
     'providers' => 
     array (
       0 => 'Laravel\\Jetstream\\JetstreamServiceProvider',
+    ),
+  ),
+  'laravel/sail' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Sail\\SailServiceProvider',
     ),
   ),
   'laravel/sanctum' => 
@@ -96,11 +110,25 @@
       0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
+  'nunomaduro/collision' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
   'nunomaduro/termwind' => 
   array (
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'spatie/laravel-activitylog' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Activitylog\\ActivitylogServiceProvider',
     ),
   ),
   'spatie/laravel-analytics' => 
@@ -121,6 +149,13 @@
       0 => 'Spatie\\Backup\\BackupServiceProvider',
     ),
   ),
+  'spatie/laravel-data' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelData\\LaravelDataServiceProvider',
+    ),
+  ),
   'spatie/laravel-database-mail-templates' => 
   array (
     'providers' => 
@@ -133,6 +168,17 @@
     'providers' => 
     array (
       0 => 'Spatie\\Feed\\FeedServiceProvider',
+    ),
+  ),
+  'spatie/laravel-ignition' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
   'spatie/laravel-newsletter' => 

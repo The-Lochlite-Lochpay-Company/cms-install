@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'database'),
+    'driver' => env('SESSION_DRIVER', 'file'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'lifetime' => env('SESSION_LIFETIME', 90),
+    'lifetime' => env('SESSION_LIFETIME', 120),
 
     'expire_on_close' => false,
 
@@ -46,7 +46,7 @@ return [
     |
     */
 
-    'encrypt' => true,
+    'encrypt' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -128,7 +128,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        'your_session'
+        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
     ),
 
     /*
