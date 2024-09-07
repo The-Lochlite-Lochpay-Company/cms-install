@@ -1,5 +1,4 @@
 {
-    "version": "1.0.0",
     "name": "lochlite/cms-install",
     "type": "project",
     "description": "Ready-to-use Lochlite CMS Starter Kit.",
@@ -7,14 +6,15 @@
     "license": "proprietary",
     "require": {
         "php": ">=8.0.2",
-        "lochlite/cms": "dev-main",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-imap": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
         "ext-openssl": "*",
-        "ext-soap": "*"
+        "ext-soap": "*",
+        "lochlite/cms": "dev-main",
+        "tightenco/ziggy": "^1.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -46,7 +46,7 @@
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "npm update",
-            "npm run prod"
+            "npm run build"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

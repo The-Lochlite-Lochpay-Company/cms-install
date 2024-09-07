@@ -57,8 +57,6 @@
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
 /**
  * @license
  * Lodash <https://lodash.com/>
@@ -75,19 +73,19 @@
  */
 
 /**
-* @vue/runtime-core v3.5.0
+* @vue/runtime-core v3.5.2
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/runtime-dom v3.5.0
+* @vue/runtime-dom v3.5.2
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/shared v3.5.0
+* @vue/shared v3.5.2
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/

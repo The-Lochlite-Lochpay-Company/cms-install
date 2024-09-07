@@ -33,6 +33,7 @@ class Starter extends Seeder
      */
     public function run()
     {
+        try{
         // Reset cached roles and permissions
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
@@ -233,8 +234,9 @@ class Starter extends Seeder
 		$settingsdefault = Settings::create([
 		   'default' => true,
 		]);
+    } catch(\Exception $e){}
         
-		$user = User::create([
+		$user = User::firstOrCreate([
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
@@ -242,7 +244,7 @@ class Starter extends Seeder
             'remember_token' => Str::random(10),
         ]);
 		$user->assignRole($admin);
-		
+
 		for($count=0;$count<10;$count++){
             $post = Posts::create([
                 'title' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur libero pulvinar, rutrum eros elementum',

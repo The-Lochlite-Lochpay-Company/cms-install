@@ -1,5 +1,6 @@
 import $ from "jquery";
-import "jquery-sparkline";
+window.$ = window.jQuery = $;
+
 import * as lodash from "lodash";
 import * as chart from "chart.js";
 import * as base64 from "js-base64";
@@ -7,15 +8,14 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import '@mdi/font/css/materialdesignicons.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'remixicon/fonts/remixicon.css';
+import * as popper from "@popperjs/core";
+import * as bootstrap from "bootstrap";
 
-window.$ = window.jQuery = $;
 window._ = lodash;
 chart.Chart.register(chart.ArcElement,chart.LineElement,chart.BarElement,chart.PointElement,chart.BarController,chart.BubbleController,chart.DoughnutController,chart.LineController,chart.PieController,chart.PolarAreaController,chart.RadarController,chart.ScatterController,chart.CategoryScale,chart.LinearScale,chart.LogarithmicScale,chart.RadialLinearScale,chart.TimeScale,chart.TimeSeriesScale,chart.Decimation,chart.Filler,chart.Legend,chart.Title,chart.Tooltip,chart.SubTitle)
 window.Chart = chart.Chart; 
 window.Base64 = base64;
 $('body').ready(function(){
-const popper = require("@popperjs/core");
-const bootstrap = require("bootstrap");
 
 window.Popper = popper;
 window.bootstrap = bootstrap;
@@ -37,6 +37,8 @@ var toastList = toastElList.map(function (toastEl) {
 })
 
 })
+
+//import "jquery-sparkline";
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -71,10 +73,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     enabledTransports: ['ws', 'wss'],
 // });
 
+import Echo from 'laravel-echo';
+window.Echo = Echo;
 
-window.Echo = require('laravel-echo').default;
+import Pusher from 'pusher-js';
+window.Pusher = Pusher;
 
-window.Pusher = require('pusher-js');
 if(process.env.MIX_PUSHER_APP_KEY){
 var notifysync = new Echo({
     broadcaster: 'pusher',
