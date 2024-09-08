@@ -38,7 +38,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 })
 
-//import "jquery-sparkline";
+import "jquery-sparkline";
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

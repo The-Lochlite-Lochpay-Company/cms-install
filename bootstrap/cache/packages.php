@@ -17,28 +17,6 @@
       0 => 'Inertia\\ServiceProvider',
     ),
   ),
-  'intervention/image' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Intervention\\Image\\ImageServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Image' => 'Intervention\\Image\\Facades\\Image',
-    ),
-  ),
-  'jenssegers/agent' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Jenssegers\\Agent\\AgentServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Agent' => 'Jenssegers\\Agent\\Facades\\Agent',
-    ),
-  ),
   'laravel/fortify' => 
   array (
     'providers' => 
@@ -124,6 +102,13 @@
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
+  'pestphp/pest-plugin-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Pest\\Laravel\\PestServiceProvider',
+    ),
+  ),
   'spatie/laravel-activitylog' => 
   array (
     'providers' => 
@@ -139,7 +124,7 @@
     ),
     'aliases' => 
     array (
-      'Analytics' => 'Spatie\\Analytics\\AnalyticsFacade',
+      'Analytics' => 'Spatie\\Analytics\\Facades\\Analytics',
     ),
   ),
   'spatie/laravel-backup' => 
@@ -170,17 +155,6 @@
       0 => 'Spatie\\Feed\\FeedServiceProvider',
     ),
   ),
-  'spatie/laravel-ignition' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
-    ),
-  ),
   'spatie/laravel-newsletter' => 
   array (
     'providers' => 
@@ -189,7 +163,7 @@
     ),
     'aliases' => 
     array (
-      'Newsletter' => 'Spatie\\Newsletter\\NewsletterFacade',
+      'Newsletter' => 'Spatie\\Newsletter\\Facades\\Newsletter',
     ),
   ),
   'spatie/laravel-permission' => 
@@ -217,11 +191,18 @@
       0 => 'Spatie\\Sitemap\\SitemapServiceProvider',
     ),
   ),
+  'spatie/php-structure-discoverer' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\StructureDiscoverer\\StructureDiscovererServiceProvider',
+    ),
+  ),
   'tightenco/ziggy' => 
   array (
     'providers' => 
     array (
-      0 => 'Tightenco\\Ziggy\\ZiggyServiceProvider',
+      0 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
     ),
   ),
   'torann/geoip' => 
