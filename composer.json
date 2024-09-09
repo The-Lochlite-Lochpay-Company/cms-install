@@ -34,11 +34,12 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "npm update",
+            "npm run build"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "npm update && npm run build"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -46,14 +47,26 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi",
-            "npm i && npm run build"
+            "@php artisan migrate --graceful --ansi || echo 'Error executing migration.'",
+            "@php artisan db:seed || echo 'Error executing seed.'",
+            "@php -r \"$currentDir = getcwd(); if (basename($currentDir) === 'lochlite') { echo 'Installing javascript dependencies, please wait...'; } else { echo 'Installing javascript dependencies, please wait...'; chdir('lochlite'); } exec('npm install'); echo 'Generating public assets, please wait...'; exec('npm run build'); \"",
+            "@php artisan queue:work --stop-when-empty",
+            "@php artisan serve"
+        ],
+        "post-env": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate --ansi"
+        ],
+        "post-database": [
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi || echo 'Error executing migration.'",
+            "@php artisan db:seed || echo 'Error executing seed.'"
         ],
         "post-install-packages-npm": [
             "@npm install"
         ],
         "post-create-assets": [
-            "@npm run prod"
+            "@npm run build"
         ]
     },
     "extra": {

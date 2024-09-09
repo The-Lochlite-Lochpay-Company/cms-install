@@ -18,6 +18,7 @@ use Lochlite\cms\Models\User;
 use Lochlite\cms\Models\Settings;
 use Lochlite\cms\Models\Posts;
 use Lochlite\cms\Models\Postsbody;
+use Lochlite\cms\Models\Domains;
 use Spatie\MailTemplates\Models\MailTemplate;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -244,9 +245,15 @@ class Starter extends Seeder
             'remember_token' => Str::random(10),
         ]);
 		$user->assignRole($admin);
+		
+        Domains::create([
+            'domain' => '127.0.0.1:8000',
+            'main' => true,
+         ]);
 
 		for($count=0;$count<10;$count++){
             $post = Posts::create([
+                'domain' => '127.0.0.1:8000',
                 'title' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur libero pulvinar, rutrum eros elementum',
                 'description' => 'Morbi id massa eu leo luctus malesuada quis ut purus. Aenean ut consequat nulla, eget condimentum orci. Vestibulum egestas erat in risus porta, ut finibus neque congue. Donec feugiat libero sed vulputate pellentesque. Cras id odio facilisis, commodo ipsum in, commodo nibh.',
                 'authors' => $user->name,
