@@ -58,6 +58,7 @@
         "@fullcalendar/timegrid": "^6.1.15",
         "@fullcalendar/vue3": "^6.1.15",
         "@heroicons/vue": "^2.1.5",
+                "@yaireo/tagify": "^4.31.3",
         "@mdi/font": "^7.4.47",
         "@popperjs/core": "^2.11.8",
         "@vitejs/plugin-vue": "^5.1.3",
